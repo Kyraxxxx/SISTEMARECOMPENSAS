@@ -708,8 +708,18 @@ window.actionMgrAddSave = () => {
 };
 
 // Final do arquivo
+// Final do arquivo
 function escapeHTML(str) {
     const d = document.createElement('div');
     d.textContent = str;
     return d.innerHTML;
+}
+
+// Register Service Worker
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+            .then(reg => console.log('SW registrado!', reg))
+            .catch(err => console.err('Erro ao registrar SW', err));
+    });
 }
