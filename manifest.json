@@ -1,4 +1,5 @@
 {
+  "id": "/SISTEMARECOMPENSAS/",
   "name": "Metal Print - Pontuações",
   "short_name": "Metal Print",
   "description": "Sistema de acompanhamento de pontuações para funcionários da Metal Print.",
@@ -12,13 +13,26 @@
       "src": "Logo.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "Logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
       "src": "Logo.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "Logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
-  ]
+  ],
+  "screenshots": []
 }
