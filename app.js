@@ -203,7 +203,7 @@ function updateHomeButtons() {
 
 // --- NAVEGAÇÃO / VIEWS ---
 // --- NAVEGAÇÃO / VIEWS ---
-window.showView = (viewName) => {
+function showView(viewName) {
     const idMap = {
         'login': 'screen-login', 'emp': 'screen-employee', 'mgr': 'screen-manager',
         'employee': 'screen-employee', 'manager': 'screen-manager'
@@ -218,7 +218,8 @@ window.showView = (viewName) => {
         state.activeView = viewName;
         renderAll();
     }
-};
+}
+window.showView = showView;
 
 // ==========================================
 // LOGIN & REGISTER
