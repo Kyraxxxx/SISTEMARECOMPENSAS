@@ -9,6 +9,10 @@
   "theme_color": "#2563eb",
   "orientation": "portrait",
   "categories": ["productivity", "business"],
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "related_applications": [],
   "icons": [
     {
       "src": "Logo.png",
@@ -34,5 +38,6 @@
       "type": "image/png",
       "purpose": "maskable"
     }
-  ]
+  ],
+  "screenshots": []
 }
