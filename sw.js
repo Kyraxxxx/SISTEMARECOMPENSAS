@@ -4,7 +4,7 @@ const ASSETS = [
   './index.html',
   './style.css',
   './app.js',
-  './Logo.png'
+  './Logo_PWA.png'
 ];
 
 self.addEventListener('install', event => {
