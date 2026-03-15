@@ -288,8 +288,13 @@ window.actionEmployeeAuth = () => {
         if (db) {
             const newRef = db.ref('employees').push();
             newRef.set(data).then(() => {
-                // Quando o Firebase responder, removemos o temporário 
-                // para evitar duplicatas, mas o firebase.on('value') cuidará disso.
+                // Se estiver logado com o ID temporário, troca pelo ID real gerado pelo Firebase
+                if (state.user && state.user.id === tempId) {
+                    state.user.id = newRef.key;
+                    localStorage.setItem('metal_print_user', JSON.stringify(state.user));
+                    renderAll();
+                }
+                // Removemos o temporário
                 delete state.employees[tempId];
             }).catch(e => console.warn("Erro sync background:", e));
         }
@@ -715,9 +720,4 @@ function escapeHTML(str) {
     return d.innerHTML;
 }
 
-// Register Service Worker
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./sw.js')
-    .then(() => console.log('Service Worker Registered'))
-    .catch(err => console.error('Service Worker Failed', err));
-}
+// Register Service Worker REMOVED - NOW A STANDARD WEBSITE
